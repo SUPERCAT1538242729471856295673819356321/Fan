@@ -1,0 +1,47 @@
+public class Fan {
+    public static final int SLOW = 0;
+    public static final int MEDIUM = 1;
+    public static final int FAST = 2;
+
+    private int speed = SLOW;
+    private boolean on = false;
+    private double radius = 5;
+    private String colour = "Blue";
+
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
+
+    public void setOn(boolean on) {
+        this.on = on;
+    }
+
+    public void setRadius(double radius) {
+        this.radius = radius;
+    }
+
+    public void setColour(String colour) {
+        this.colour = colour;
+    }
+
+    @Override
+    public String toString() {
+        return "Colour = " + colour + ", Radius = " + radius + ", Speed = " + speed;
+    }
+
+    public static void main(String[] args) {
+        Fan myFan = new Fan();
+        Fan myBiggestFan = new Fan();
+
+        myFan.setColour("Blue");
+        myFan.setRadius(10.00);
+        myFan.setSpeed(FAST);
+
+        myBiggestFan.setColour("Yellow");
+        myBiggestFan.setRadius(5);
+        myBiggestFan.setSpeed(MEDIUM);
+
+        System.out.println(myFan.toString());
+        System.out.println(myBiggestFan.toString());
+    }
+}
